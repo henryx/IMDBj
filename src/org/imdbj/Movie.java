@@ -15,6 +15,7 @@ import org.imdbj.net.Search;
  * @author enrico
  */
 public class Movie {
+    private final String SEARCH_BY_TITLE = "&s=tt";
     
     public Movie(String title) throws UnknownMovieException {
         StringBuffer data;
@@ -32,6 +33,7 @@ public class Movie {
         
         search = new Search();
         search.setQuery(title);
+        search.setByType(this.SEARCH_BY_TITLE);
         
         data = search.find();
         

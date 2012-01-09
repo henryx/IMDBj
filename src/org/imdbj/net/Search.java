@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 public class Search {
     private final String SEARCH_URL = "http://www.imdb.com/find?q=";
     private String term;
+    private String searchType;
     
     private URLConnection createUrl(String uri) throws MalformedURLException, IOException {
         URL url;
@@ -44,9 +45,9 @@ public class Search {
         data = new StringBuffer();
         
         if (this.term.contains(" ")) {
-            query = this.SEARCH_URL + this.term.replace(" ", "+");
+            query = this.SEARCH_URL + this.term.replace(" ", "+") + this.searchType;
         } else {
-            query = this.SEARCH_URL + this.term;
+            query = this.SEARCH_URL + this.term + this.searchType;
         }
         
         try {
@@ -76,5 +77,9 @@ public class Search {
      */
     public void setQuery(String query) {
         this.term = query;
+    }
+    
+    public void setByType(String type) {
+        this.searchType = type;
     }
 }
