@@ -8,7 +8,7 @@
 package org.imdbj;
 
 import org.imdbj.exceptions.UnknownMovieException;
-import org.imdbj.net.Search;
+import org.imdbj.pages.SearchPage;
 
 /**
  *
@@ -28,10 +28,10 @@ public class Movie {
     }
     
     private StringBuffer search(String title) throws UnknownMovieException {
-        Search search;
+        SearchPage search;
         StringBuffer data;
         
-        search = new Search();
+        search = new SearchPage();
         search.setQuery(title);
         search.setByType(this.SEARCH_BY_TITLE);
         

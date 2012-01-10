@@ -5,7 +5,7 @@
  * License       LGPLv2.1 (see lgpl-2.1.txt for details)
  */
 
-package org.imdbj.net;
+package org.imdbj.pages;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  *
  * @author enrico
  */
-public class Search {
+public class SearchPage {
     private final String SEARCH_URL = "http://www.imdb.com/find?q=";
     private String term;
     private String searchType;
@@ -64,9 +64,9 @@ public class Search {
             stream.close();
             
         } catch (MalformedURLException ex) {
-            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchPage.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchPage.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         return data;
