@@ -4,15 +4,13 @@
  * Description   IMDBj - A java library for fetch and manage IMDB Movie data
  * License       LGPLv2.1 (see lgpl-2.1.txt for details)
  */
-
 package org.imdbj;
 
 /**
  *
  * @author enrico
  */
-public class Movie {
-  
-    public Movie() {
+public class Actor {
+    public Actor() {
     }
 }

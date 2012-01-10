@@ -11,8 +11,8 @@ package org.imdbj;
  *
  * @author enrico
  */
-public class Movie {
-  
-    public Movie() {
+public class Director {
+    public Director() {
+        
     }
 }
